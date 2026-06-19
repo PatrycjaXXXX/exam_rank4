@@ -22,7 +22,9 @@ level 2 (AST creation):
 ```
 int ft_popen(const char *file, char *const argv[], char type);
 ```
-**Allowed functions**:
+<details>
+<summary><strong>Allowed functions</strong></summary>
+
 - [pipe](#pipe),
 - [fork](#fork),
 - [dup2](#dup2),
@@ -30,6 +32,7 @@ int ft_popen(const char *file, char *const argv[], char type);
 - [close](#close),
 - [exit](#exit).
 
+</details>
 
 
 ## picoshell
@@ -37,7 +40,9 @@ int ft_popen(const char *file, char *const argv[], char type);
 ```
 int    picoshell(char **cmds[]);
 ```
-**Allowed functions**:
+<details>
+<summary><strong>Allowed functions</strong></summary>
+
 - [close](#close),
 - [fork](#fork),
 - [wait](#wait),
@@ -46,12 +51,16 @@ int    picoshell(char **cmds[]);
 - [dup2](#dup2),
 - [pipe](#pipe).
 
+</details>
+
 ## sandbox
 **Description**: Create a safe environment to test functions.
 ```
 int sandbox(void (*f)(void), unsigned int timeout, bool verbose);
 ```
-**Allowed functions**:
+<details>
+<summary><strong>Allowed functions</strong></summary>
+
 - [fork](#fork),
 - [waitpid](#waitpid),
 - [exit](#exit),
@@ -67,12 +76,16 @@ int sandbox(void (*f)(void), unsigned int timeout, bool verbose);
 - [sigdelset](#sigdelset),
 - [sigismember](#sigismember).
 
+</details>
+
 ## argo
 **Description**: Create an Abstract Syntax Tree (AST) from a command line.
 ```
 int	argo(json *dst, FILE *stream);
 ```
-**Allowed functions**:
+<details>
+<summary><strong>Allowed functions</strong></summary>
+
 - [getc](#getc),
 - [ungetc](#ungetc),
 - [printf](#printf),
@@ -84,10 +97,14 @@ int	argo(json *dst, FILE *stream);
 - [fscanf](#fscanf),
 - [write](#write).
 
+</details>
+
 ## vbc
 **Description**: Create an Abstract Syntax Tree (AST) from a command line. That will be used to calculate the value of a mathematical expression.
 
-**Allowed functions**:
+<details>
+<summary><strong>Allowed functions</strong></summary>
+
 - [malloc](#malloc),
 - [calloc](#calloc),
 - [realloc](#realloc),
@@ -95,6 +112,8 @@ int	argo(json *dst, FILE *stream);
 - [printf](#printf),
 - [isdigit](#isdigit),
 - [write](#write).
+
+</details>
 
 ## Allowed functions
 
