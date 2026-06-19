@@ -34,9 +34,9 @@ int ft_popen(const char *file, char *const argv[], char type)
 				exit(1);
 		}
 		close(pipefd[0]);
-		close(pipefd[1]); //not needed after dup2
-		execvp(file, argv); //execute the command
-		exit(1); // If execvp fails
+		close(pipefd[1]); // not needed after dup2
+		execvp(file, argv); // execute the command
+		exit(1); // if execvp fails
 	}
 	else
 	{
